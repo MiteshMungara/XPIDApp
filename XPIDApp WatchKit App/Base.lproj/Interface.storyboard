@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="XPIDApp_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="0.90000000000000002" alignment="center" verticalAlignment="center" layout="vertical" id="Vvh-75-UXV">
+                            <items>
+                                <group alignment="center" verticalAlignment="center" id="Ov4-v9-TYA">
+                                    <items>
+                                        <imageView width="50" height="50" alignment="center" verticalAlignment="center" hidden="YES" image="loader1" id="d9v-aZ-OtQ"/>
+                                    </items>
+                                </group>
+                                <imageView width="71" height="35" alignment="center" image="Transparent_4" id="sob-wp-uao">
+                                    <color key="tintColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
+                                <label width="124" height="50" alignment="center" text="Post your experience! Earn XPID Tokens!&quot;" textAlignment="center" numberOfLines="3" id="62T-0T-3c5">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                </label>
+                                <label width="1" alignment="center" textAlignment="center" id="2MW-bn-V0h">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                </label>
+                                <label width="1" alignment="center" textAlignment="center" id="IAt-Mr-btP">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                </label>
+                                <separator width="1" alignment="center" id="5RX-nG-8kW"/>
+                                <button width="1" height="27" alignment="center" title="Post XPID!" id="Y3A-7x-P1L">
+                                    <color key="titleColor" red="0.93333333330000001" green="0.46274509800000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="postXPBtnPressedWithSender:" destination="AgC-eL-Hgc" id="C3m-kZ-QUs"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="infoLabel" destination="62T-0T-3c5" id="eHF-vP-vL2"/>
+                        <outlet property="lineSap" destination="5RX-nG-8kW" id="dzk-pP-g1p"/>
+                        <outlet property="loader" destination="d9v-aZ-OtQ" id="nXE-Gm-8u0"/>
+                        <outlet property="logoImgV" destination="sob-wp-uao" id="0G7-gN-ifh"/>
+                        <outlet property="postBtn" destination="Y3A-7x-P1L" id="zPM-5Y-lqg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-264" y="299"/>
+        </scene>
+        <!--ConnectToIphoneVC-->
+        <scene sceneID="WNC-lo-cip">
+            <objects>
+                <controller identifier="ConnectToIphoneVC" id="ly8-pv-MTE" customClass="ConnectToIphoneVC" customModule="XPIDApp_WatchKit_Extension">
+                    <items>
+                        <group alignment="center" verticalAlignment="center" id="TqG-gX-vg7">
+                            <items>
+                                <imageView width="50" height="50" alignment="center" verticalAlignment="center" hidden="YES" image="loader1" id="pf7-nc-Nsm"/>
+                            </items>
+                        </group>
+                        <label width="1" alignment="center" text="Login With Iphone" textAlignment="center" numberOfLines="2" id="qk6-GW-PzN">
+                            <fontDescription key="font" type="system" pointSize="15"/>
+                        </label>
+                        <label width="1" alignment="center" text="Enter code in iphone:" textAlignment="center" numberOfLines="2" id="m8w-EF-fIg">
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                        <button width="57" height="24" alignment="center" title="MIC" id="vOV-ty-gVo">
+                            <color key="backgroundColor" red="0.93333333330000001" green="0.46274509800000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                            <connections>
+                                <action selector="MicBtnPressedWithSender:" destination="zxu-di-XVJ" id="zh3-7q-TAs"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="27" alignment="center" title="Connect" id="TnK-2H-b4n">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.93333333330000001" green="0.46274509800000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="continueverifyBtnPressedWithSender:" destination="ly8-pv-MTE" id="d8j-el-9ev"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="ConnectButton" destination="TnK-2H-b4n" id="sSU-s5-MbY"/>
+                        <outlet property="lblTopHeader" destination="qk6-GW-PzN" id="s61-bQ-IjN"/>
+                        <outlet property="lblcode" destination="m8w-EF-fIg" id="ZNm-DB-dgV"/>
+                        <outlet property="loader" destination="pf7-nc-Nsm" id="nFP-QE-ycl"/>
+                        <outlet property="micButton" destination="vOV-ty-gVo" id="MIl-gN-5td"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-56" y="304"/>
+        </scene>
+        <!--LoginCompleteVC-->
+        <scene sceneID="TVo-N7-z2o">
+            <objects>
+                <controller identifier="LoginCompleteVC" id="ANc-At-fYC" customClass="LoginCompleteVC" customModule="XPIDApp_WatchKit_Extension">
+                    <items>
+                        <label width="1" height="35" alignment="center" text="Select Pin Shown In Iphone" textAlignment="center" numberOfLines="2" id="K4s-Zz-Jxr">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <group width="1" height="35" alignment="center" id="ecr-Kc-h0A">
+                            <items>
+                                <button width="0.5" height="35" alignment="left" id="a53-4L-V9f">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="onepinBtnPressedWithSender:" destination="ANc-At-fYC" id="0uR-4d-DGq"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="35" alignment="left" id="eTH-cq-p1e">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="twopinBtnPressedWithSender:" destination="ANc-At-fYC" id="0uz-wd-U3P"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="35" alignment="center" id="2JK-mb-jw4">
+                            <items>
+                                <button width="0.5" height="35" alignment="left" id="Cq0-Aa-dRG">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="threepinBtnPressedWithSender:" destination="ANc-At-fYC" id="eKo-gT-qk0"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="35" alignment="left" id="qD2-rM-oEV">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="fourpinBtnPressedWithSender:" destination="ANc-At-fYC" id="PO8-BQ-5qU"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="fourbtn" destination="qD2-rM-oEV" id="0QK-ai-MrW"/>
+                        <outlet property="onebtn" destination="a53-4L-V9f" id="ucU-OH-Opt"/>
+                        <outlet property="threebtn" destination="Cq0-Aa-dRG" id="pwu-o7-6V8"/>
+                        <outlet property="twobtn" destination="eTH-cq-p1e" id="Jvd-mR-nGG"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="152" y="308"/>
+        </scene>
+        <!--Location-->
+        <scene sceneID="wOa-jJ-Ezp">
+            <objects>
+                <controller identifier="Location" id="UTP-vk-y2V" customClass="NearLocationInterfaceController" customModule="XPIDApp_WatchKit_Extension">
+                    <items>
+                        <group alignment="center" verticalAlignment="center" id="jyE-Q8-eeB">
+                            <items>
+                                <imageView width="50" height="50" alignment="center" verticalAlignment="center" hidden="YES" image="loader1" id="tsL-0V-ojk"/>
+                            </items>
+                        </group>
+                        <label width="1" height="37" alignment="center" text="Select Any Location" textAlignment="center" numberOfLines="2" id="tVN-P8-D9R">
+                            <fontDescription key="font" type="system" pointSize="13"/>
+                        </label>
+                        <group alignment="left" layout="vertical" id="1Ef-hx-d1n">
+                            <items>
+                                <table alignment="center" id="iAt-aE-E9Y">
+                                    <items>
+                                        <tableRow identifier="locationcell" id="R5l-bY-uKO" customClass="RowController" customModule="XPIDApp_WatchKit_Extension">
+                                            <group key="rootItem" width="1" height="44" alignment="left" id="tHu-Z3-PaF">
+                                                <items>
+                                                    <label width="1" height="33" alignment="center" verticalAlignment="center" textAlignment="center" numberOfLines="2" id="XOs-l0-120">
+                                                        <fontDescription key="font" type="system" pointSize="13"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <outlet property="splits" destination="XOs-l0-120" id="G9N-4H-QEx"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="lblTopHeader" destination="tVN-P8-D9R" id="vMo-Zn-FtW"/>
+                        <outlet property="loader" destination="tsL-0V-ojk" id="X9c-Ae-Gk4"/>
+                        <outlet property="tableV" destination="iAt-aE-E9Y" id="CoF-un-jng"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="363" y="304"/>
+        </scene>
+        <!--RatingVC-->
+        <scene sceneID="xJm-cd-LY2">
+            <objects>
+                <controller identifier="RatingVC" id="22H-p2-PrL" customClass="OverAllSatisfactionController" customModule="XPIDApp_WatchKit_Extension">
+                    <items>
+                        <group alignment="center" verticalAlignment="center" id="oJN-2p-Os9">
+                            <items>
+                                <label width="1" height="47" alignment="center" text="How satisfied were you with your experience? " textAlignment="center" numberOfLines="3" id="pmN-SO-ovs">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="center" verticalAlignment="center" id="db5-ij-E0O">
+                            <items>
+                                <label width="1" height="21" alignment="center" text="1 = Not at all   5 = Extremely" textAlignment="center" id="EYy-XZ-BdS">
+                                    <fontDescription key="font" type="system" pointSize="9"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="center" verticalAlignment="center" id="Llf-fz-AbP">
+                            <items>
+                                <button width="25" height="25" alignment="center" backgroundImage="logo" id="Xl4-ph-9Hf">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="oneRateVBtnPressedWithSender:" destination="22H-p2-PrL" id="cr1-SC-Cse"/>
+                                    </connections>
+                                </button>
+                                <button width="25" height="25" alignment="center" backgroundImage="logo" id="dJP-Ks-yaa">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="twoRateVBtnPressedWithSender:" destination="22H-p2-PrL" id="kiV-Wm-GeR"/>
+                                    </connections>
+                                </button>
+                                <button width="25" height="25" alignment="center" backgroundImage="logo" id="O2e-jQ-xjH">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="threeRateVBtnPressedWithSender:" destination="22H-p2-PrL" id="eSi-ds-L3F"/>
+                                    </connections>
+                                </button>
+                                <button width="25" height="25" alignment="center" backgroundImage="logo" id="3RC-OB-iYG">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="fourRateVBtnPressedWithSender:" destination="22H-p2-PrL" id="bqM-Mx-hE3"/>
+                                    </connections>
+                                </button>
+                                <button width="25" height="25" alignment="center" backgroundImage="logo" id="lFk-ff-mTF">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="fiveRateVBtnPressedWithSender:" destination="22H-p2-PrL" id="vo1-MP-0fa"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="center" verticalAlignment="center" id="XwR-If-jPe">
+                            <items>
+                                <button width="25" height="11" alignment="center" title="1" id="Kjt-5C-vLU">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </button>
+                                <button width="25" height="11" alignment="center" title="2" id="dLd-iP-53w">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </button>
+                                <button width="25" height="11" alignment="center" title="3" id="NSs-ZH-RNr">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </button>
+                                <button width="25" height="11" alignment="center" title="4" id="Dzz-RQ-wcY">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </button>
+                                <button width="25" height="11" alignment="center" title="5" id="uvk-ER-oMy">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="620" y="314"/>
+        </scene>
+        <!--NPSVC-->
+        <scene sceneID="wHO-Nj-QxB">
+            <objects>
+                <controller identifier="NPSVC" id="UaH-hu-bun" customClass="NPSVC" customModule="XPIDApp_WatchKit_Extension">
+                    <items>
+                        <group alignment="center" verticalAlignment="center" id="79K-1u-Bsp">
+                            <items>
+                                <imageView width="50" height="50" alignment="center" verticalAlignment="center" hidden="YES" image="loader1" id="NQa-lW-VD3"/>
+                            </items>
+                        </group>
+                        <group alignment="center" verticalAlignment="center" id="p7w-mM-Iu0">
+                            <items>
+                                <label width="1" height="52" alignment="center" text="How likely would you  recommend this experience to your friends and family?" textAlignment="center" numberOfLines="3" id="BK3-ys-HTY">
+                                    <fontDescription key="font" type="system" pointSize="9"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="center" verticalAlignment="center" id="cKD-Ca-yaD">
+                            <items>
+                                <label width="1" height="21" alignment="center" text="0 = Not Likely  10 = Very Likely" textAlignment="center" id="dxZ-um-DXE">
+                                    <fontDescription key="font" type="system" pointSize="8"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="center" verticalAlignment="center" id="9JC-Nr-g8B">
+                            <items>
+                                <button width="21" height="22" alignment="center" backgroundImage="logo" id="FeA-C3-7Cu">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                </button>
+                                <button width="21" height="22" alignment="center" backgroundImage="logo" id="yqF-DA-OBB">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="OneNPSBtnPressedWithSender:" destination="UaH-hu-bun" id="xst-ak-lfb"/>
+                                    </connections>
+                                </button>
+                                <button width="21" height="22" alignment="center" backgroundImage="logo" id="qiB-N8-cQG">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="TwoNPSBtnPressedWithSender:" destination="UaH-hu-bun" id="7vr-De-GSu"/>
+                                    </connections>
+                                </button>
+                                <button width="21" height="22" alignment="center" backgroundImage="logo" id="GuV-Xy-XvP">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="ThreeNPSBtnPressedWithSender:" destination="UaH-hu-bun" id="l3x-Ke-gff"/>
+                                    </connections>
+                                </button>
+                                <button width="21" height="22" alignment="center" backgroundImage="logo" id="m0A-cp-Q1y">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="FourNPSBtnPressedWithSender:" destination="UaH-hu-bun" id="k8m-rk-TPf"/>
+                                    </connections>
+                                </button>
+                                <button width="21" height="22" alignment="center" backgroundImage="logo" id="BQM-Qi-RL0">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="FiveNPSBtnPressedWithSender:" destination="UaH-hu-bun" id="xAU-tC-xeU"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="center" verticalAlignment="center" id="sM2-3z-p3h">
+                            <items>
+                                <button width="21" height="11" alignment="center" title="0" id="7eP-BD-PXA">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </button>
+                                <button width="21" height="11" alignment="center" title="1" id="az2-pu-eZG">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </button>
+                                <button width="21" height="11" alignment="center" title="2" id="aGK-0s-2JR">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </button>
+                                <button width="21" height="11" alignment="center" title="3" id="QcS-Pe-tgL">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </button>
+                                <button width="21" height="11" alignment="center" title="4" id="uiJ-aX-UdV">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </button>
+                                <button width="21" height="11" alignment="center" title="5" id="VcQ-tc-Mzu">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="center" verticalAlignment="center" id="F0K-uB-tGA">
+                            <items>
+                                <button width="22" height="22" alignment="center" backgroundImage="logo" id="etS-Pn-9PF">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="SixNPSBtnPressedWithSender:" destination="UaH-hu-bun" id="wmx-t9-5i4"/>
+                                    </connections>
+                                </button>
+                                <button width="22" height="22" alignment="center" backgroundImage="logo" id="ci7-1T-YSa">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="SevenNPSBtnPressedWithSender:" destination="UaH-hu-bun" id="VzP-s8-tc1"/>
+                                    </connections>
+                                </button>
+                                <button width="22" height="22" alignment="center" backgroundImage="logo" id="uoU-29-Npe">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="EightNPSBtnPressedWithSender:" destination="UaH-hu-bun" id="heV-eJ-yF5"/>
+                                    </connections>
+                                </button>
+                                <button width="22" height="22" alignment="center" backgroundImage="logo" id="ml2-54-b05">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="NineNPSBtnPressedWithSender:" destination="UaH-hu-bun" id="9sv-YX-EAX"/>
+                                    </connections>
+                                </button>
+                                <button width="22" height="22" alignment="center" backgroundImage="logo" id="Nxm-ux-F1H">
+                                    <color key="backgroundColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="TenNPSBtnPressedWithSender:" destination="UaH-hu-bun" id="NfH-mD-iJG"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="11" alignment="center" verticalAlignment="center" id="DXL-Bi-tvw">
+                            <items>
+                                <button width="23" height="13" alignment="center" title="6" id="en0-C0-1tC">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="9"/>
+                                </button>
+                                <button width="23" height="13" alignment="center" title="7" id="nWq-ND-gMx">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="9"/>
+                                </button>
+                                <button width="23" height="13" alignment="center" title="8" id="68C-3Q-xjG">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="9"/>
+                                </button>
+                                <button width="23" height="13" alignment="center" title="9" id="Ytq-tH-Ut9">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="9"/>
+                                </button>
+                                <button width="23" height="13" alignment="center" title="10" id="pPN-Mn-8gK">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="9"/>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="TopHeaderlabel" destination="BK3-ys-HTY" id="OQ1-6a-d2I"/>
+                        <outlet property="firstGroup" destination="9JC-Nr-g8B" id="0Mh-LQ-Pjp"/>
+                        <outlet property="loader" destination="NQa-lW-VD3" id="lD9-7v-krR"/>
+                        <outlet property="secondGroup" destination="F0K-uB-tGA" id="P73-u7-M39"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="93" y="625"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="-386" y="620"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="XPIDApp_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-144" y="635"/>
+        </scene>
+        <!--VoiceVC-->
+        <scene sceneID="2b4-XF-Zkj">
+            <objects>
+                <controller identifier="VoiceVC" id="zxu-di-XVJ" customClass="VoiceVC" customModule="XPIDApp_WatchKit_Extension">
+                    <items>
+                        <group alignment="center" verticalAlignment="center" id="Czc-im-jiX">
+                            <items>
+                                <imageView width="50" height="50" alignment="center" verticalAlignment="center" hidden="YES" image="loader1" id="msR-yp-ftT"/>
+                            </items>
+                        </group>
+                        <label width="129" height="22" alignment="center" text="Leave Voice Review?" textAlignment="center" id="l07-LK-Cb7">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label width="1" alignment="left" id="8X5-hT-IXz"/>
+                        <button width="57" height="24" alignment="center" title="MIC" id="6V3-Q7-nSM">
+                            <color key="backgroundColor" red="0.93333333330000001" green="0.46274509800000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                            <connections>
+                                <action selector="MicBtnPressedWithSender:" destination="zxu-di-XVJ" id="UI2-gr-gHg"/>
+                            </connections>
+                        </button>
+                        <separator width="1" alignment="center" id="xLu-xu-7EA"/>
+                        <button width="62" height="24" alignment="center" title="Erase" id="uSG-u1-yep">
+                            <color key="backgroundColor" red="0.93333333330000001" green="0.46274509800000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                            <connections>
+                                <action selector="MicBtnPressedWithSender:" destination="zxu-di-XVJ" id="8f3-EL-U68"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="26" alignment="center" title="SUBMIT" id="TIW-Eo-oqr">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                            <connections>
+                                <action selector="SubmitBtnPressedWithSender:" destination="zxu-di-XVJ" id="yb3-Bd-3vs"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="EraseButton" destination="uSG-u1-yep" id="EWq-vD-WUC"/>
+                        <outlet property="MicButton" destination="6V3-Q7-nSM" id="1po-nn-Jbt"/>
+                        <outlet property="loader" destination="msR-yp-ftT" id="o57-iJ-HkK"/>
+                        <outlet property="saparetorLabel" destination="xLu-xu-7EA" id="iMI-mV-pqD"/>
+                        <outlet property="submitButton" destination="TIW-Eo-oqr" id="YSt-El-ovx"/>
+                        <outlet property="topheaderLabel" destination="l07-LK-Cb7" id="F26-vX-aA4"/>
+                        <outlet property="voiceLabel" destination="8X5-hT-IXz" id="j32-4q-ssZ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="363" y="625"/>
+        </scene>
+        <!--ConfirmVC-->
+        <scene sceneID="Utt-l9-yK7">
+            <objects>
+                <controller identifier="ConfirmVC" id="AC7-HL-UPz" customClass="ConfirmVC" customModule="XPIDApp_WatchKit_Extension">
+                    <items>
+                        <imageView width="71" height="35" alignment="center" image="Transparent_4" id="ORF-Nx-r38">
+                            <color key="tintColor" red="0.91577482219999995" green="0.36155551670000002" blue="0.1908949912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </imageView>
+                        <label width="1" alignment="center" text="Thank You!" textAlignment="center" id="FvI-MG-nXC">
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                        <label width="1" height="27" alignment="center" text="You just earned +1 XP" textAlignment="center" id="xZQ-Z0-CUQ">
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                        <separator width="1" alignment="center" id="did-j7-Iaz"/>
+                        <button width="1" height="27" alignment="center" title="Post XP!" id="qhY-Ke-UbG">
+                            <color key="titleColor" red="0.93333333330000001" green="0.46274509800000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="submitBtnPressedWithSender:" destination="AC7-HL-UPz" id="HsJ-1t-L7z"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="620" y="625"/>
+        </scene>
+    </scenes>
+</document>
